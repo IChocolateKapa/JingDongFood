@@ -1,4 +1,11 @@
 @charset "utf-8";
+/* -- 全局变量 -- */
+/* -- 全局变量 -- */
+/* --需要兼容的属性-- */
+/*默认参数*/
+/* --需要兼容的属性-- */
+/*border*/
+/*border*/
 .header {
   width: 100%;
   height: 30px;
@@ -7,34 +14,96 @@
 }
 .header .headerContent {
   width: 1210px;
+  border: 1px solid #000000;
   line-height: 30px;
+  height: 30px;
 }
+.header .headerContent .navListItem {
+  float: left;
+  width: calc(101px);
+}
+.header .headerContent .ulLeft {
+  float: left;
+  width: 30%;
+}
+.header .headerContent .ulRight {
+  float: right;
+  width: 64%;
+}
+.header .headerContent .ulRight .navListItem {
+  width: auto;
+  margin-right: 18px;
+}
+.header .headerContent .ulRight a {
+  color: #6A6A6A;
+  text-decoration: none;
+}
+.header .headerContent .ulRight a:hover {
+  text-decoration: underline;
+}
+/*
+.delivery:hover.deliveryCity{
+  display: block;
+}*/
 .delivery {
   height: 30px;
-  overflow: hidden;
-  position: relative;
+  z-index: 9;
+  text-align: center;
 }
-.delivery:hover {
+._navHover {
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
   background: #ffffff;
 }
-.delivery:hover ._downArrow {
-  top: -1px;
+._arrowHover {
+  top: -2px !important;
   transform: rotate(180deg);
   transform-origin: center;
 }
+.deliveryCity {
+  padding-top: 10px;
+  width: 313px;
+  height: 246px;
+  top: -1px;
+  border: 1px solid #dddddd;
+  z-index: 3;
+  display: none;
+  text-align: left;
+}
+.deliveryCity .city {
+  float: left;
+  width: 60px;
+  height: 22px;
+  line-height: 22px;
+  padding: 2px 0;
+}
+.deliveryCity a {
+  display: inline-block;
+  float: left;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #666666;
+}
+.deliveryCity a:hover {
+  color: #c81623;
+  background: #f4f4f4;
+}
+._aClick {
+  color: #ffffff !important;
+  background: #c81623 !important;
+}
 ._downArrow {
-  overflow: hidden;
   height: 7px;
   width: 13px;
   top: 2px;
   left: -4px;
   color: #6A6A6A;
   font: 400 15px/15px consolas;
-  transition: .2s linear .1s;
-  -webkit-transition: .2s linear .1s;
-  -moz-transition: .2s linear .1s;
-  -ms-transition: .2s linear .1s;
-  -o-transition: .2s linear .1s;
+  transition: 0.2s linear 0s;
+  -webkit-transition: 0.2s linear 0s;
+  -moz-transition: 0.2s linear 0s;
+  -ms-transition: 0.2s linear 0s;
+  -o-transition: 0.2s linear 0s;
 }
 ._downArrow i {
   font-size: 22px;

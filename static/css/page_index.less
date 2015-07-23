@@ -1,8 +1,57 @@
 @charset "utf-8";
 
+/* -- 全局变量 -- */
 @minWidth: 1210px;
 @headerBG: #f1f1f1;
 @headerH: 30px;
+@navTextColor: #666;
+@navListItemW: 95px;
+/* -- 全局变量 -- */
+
+
+/* --需要兼容的属性-- */
+.rotate(@deg){
+  transform: rotate(@deg);
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  -ms-transform: rotate(@deg);
+  -o-transform: rotate(@deg);
+}
+.border-radius(@radius){
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+}
+/*默认参数*/
+.boxShadow(@x:0, @y:0, @blur:1px, @color:#000){
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+  -ms-box-shadow: @arguments;
+  -o-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+/* --需要兼容的属性-- */
+/*border*/
+.border(@color:black){
+  border: 1px solid @color;
+}
+.border-left(@color:black){
+  border-left: 1px solid @color;
+}
+.border-right(@color:black){
+  border-right: 1px solid @color;
+}
+.border-top(@color:black){
+  border-top: 1px solid @color;
+}
+.border-bottom(@color:black){
+  border-bottom: 1px solid @color;
+}
+/*border*/
+
 
 .header{
   width: 100%;
@@ -11,46 +60,107 @@
   background: @headerBG;
   .headerContent{
     width: @minWidth;
+    .border();
     line-height: @headerH;
+    height: @headerH;
+    .navListItem{
+      float: left;
+      width: calc(@navListItemW + 6);
+    }
+    .ulLeft{
+      float: left;
+      width: 30%;
+    }
+    .ulRight{
+      float: right;
+      width: 64%;
+      .navListItem{
+        width: auto;
+        margin-right: 18px;
+      }
+      a{
+        color: #6A6A6A;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
   }
 }
-
+/*
+.delivery:hover.deliveryCity{
+  display: block;
+}*/
 .delivery{
   height: @headerH;
-  overflow: hidden;
-  position: relative;
-  &:hover{
-    background: #ffffff;
-    ._downArrow{
-      top: -1px;
-      transform: rotate(180deg);
-      transform-origin: center;
+  z-index: 9;
+  text-align: center;
+}
+._navHover{
+  .border-left(#dddddd);
+  .border-right(#dddddd);
+  background: #ffffff;
+}
+._arrowHover{
+  top: -2px !important;
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+
+.deliveryCity{
+  padding-top: 10px;
+  width: 313px;
+  height: 246px;
+  top: -1px;
+  .border(#dddddd);
+  z-index: 3;
+  display: none;
+  text-align: left;
+  .city{
+    float: left;
+    width: 60px;
+    height: 22px;
+    line-height: 22px;
+    padding: 2px 0;
+    }
+  a{
+    display: inline-block;
+    float: left;
+    padding: 0 8px;
+    text-decoration: none;
+    color: @navTextColor;
+    &:hover{
+      color: #c81623;
+      background: #f4f4f4;
     }
   }
 }
 
+._aClick{
+  color: #ffffff !important;
+  background: #c81623 !important;;
+}
 ._downArrow{
-  overflow: hidden;
   height: 7px;
   width: 13px;
   top: 2px;
   left: -4px;
   color: #6A6A6A;
   font: 400 15px/15px consolas;
-  transition: .2s linear .1s;
-  -webkit-transition: .2s linear .1s;
-  -moz-transition: .2s linear .1s;
-  -ms-transition: .2s linear .1s;
-  -o-transition: .2s linear .1s;
+  .transition(.2s, linear, 0s);
   i{
     font-size: 22px;
     top: -8px;
     left: -4px;
-    transform: rotate(-8deg);
-    -webkit-transform: rotate(-8deg);
-    -moz-transform: rotate(-8deg);
-    -ms-transform: rotate(-8deg);
-    -o-transform: rotate(-8deg);
+    .rotate(-8deg);
   }
 }
-
+.transition(@duration:.1s, @animate:linear, @delay:0s){
+  transition: @duration @animate @delay;
+  -webkit-transition: @duration @animate @delay;
+  -moz-transition: @duration @animate @delay;
+  -ms-transition: @duration @animate @delay;
+  -o-transition: @duration @animate @delay;
+}
