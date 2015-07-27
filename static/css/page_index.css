@@ -42,6 +42,7 @@
   width: auto;
   position: relative;
   margin: 0 6px;
+  z-index: 70;
 }
 .header .headerContent .ulRight .navListItem:not(:last-of-type)::after {
   content: '|';
@@ -62,17 +63,18 @@
 }
 .delivery {
   height: 30px;
-  z-index: 9;
+  z-index: 99;
   text-align: center;
 }
 .deliveryCity {
   padding-top: 10px;
   padding-left: 10px;
-  top: -1px;
+  top: 29px;
   border: 1px solid #dddddd;
-  z-index: 3;
   display: none;
   text-align: left;
+  background: white;
+  z-index: 20;
 }
 .deliveryCity .city {
   float: left;
@@ -128,4 +130,189 @@
   left: -3px;
   transform: rotate(180deg);
   transform-origin: center;
+}
+._kindsArrowHover {
+  top: 10px !important;
+  right: 5px !important;
+  transform: rotate(180deg);
+  transform-origin: center;
+}
+.searchBar_t {
+  z-index: 10;
+}
+.searchBar_l {
+  width: 352px;
+  height: 70%;
+}
+.searchBar_l .logo {
+  width: 270px;
+  height: 60px;
+  top: 15px;
+  background: url("../images/logo.png");
+}
+.searchBar_l .kinds {
+  width: 190px;
+  height: 30px;
+  top: 30px;
+  left: 170px;
+  background: white;
+}
+.searchBar_l .kinds figure {
+  z-index: 5;
+  top: -15px;
+  left: 11px;
+  width: 75px;
+  height: 28px;
+  padding: 0 3px;
+  background: white;
+  border: 1px solid #dddddd;
+}
+.searchBar_l .kinds figcaption {
+  width: 81px;
+  height: 28px;
+  background: white;
+  left: -3px;
+}
+.searchBar_l .kinds figcaption a {
+  width: 65px;
+  line-height: 28px;
+  left: -3px;
+}
+.searchBar_l .kinds figcaption a:hover {
+  color: #cd0a0a;
+}
+.searchBar_l .kinds ._downArrow {
+  top: 12px;
+  right: 2px;
+}
+.searchBar_l .kinds ul {
+  z-index: 8;
+  top: 27px;
+  left: -1px;
+  width: 210px;
+  height: 360px;
+  padding: 10px;
+  border: 1px solid #dddddd;
+}
+.searchBar_l .kinds ul li {
+  margin: 7px 0;
+}
+.searchBar_l .kinds ul a {
+  display: inline-block;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #666666;
+}
+.searchBar_l .kinds ul a:hover {
+  color: #c81623;
+  background: #f4f4f4;
+}
+.searchBar_m {
+  top: 27px;
+  width: 578px;
+}
+.searchBar_m input {
+  height: 32px;
+  float: left;
+  border: 2px solid #d26b31;
+  outline: none;
+}
+.searchBar_m input[type='text'] {
+  width: 460px;
+  text-indent: 6px;
+  font-size: 15px;
+}
+.searchBar_m input[type='submit'] {
+  width: 82px;
+  cursor: pointer;
+  background: #d26b31;
+  color: white;
+  height: 36px;
+  font-size: 16px;
+  font-family: "Microsoft Yahei";
+}
+.searchBar_r {
+  width: 141px;
+  height: 34px;
+  top: 28px;
+  right: 50px;
+  cursor: pointer;
+  border: 1px solid #dddddd;
+}
+.searchBar_r .delivery {
+  height: 34px;
+  background: #F9F9F9;
+  z-index: 10;
+}
+.searchBar_r h4 {
+  z-index: 10;
+  top: -8px;
+  left: -4px;
+}
+.searchBar_r h4:hover {
+  color: #cd0a0a;
+}
+.searchBar_r .car {
+  z-index: 10;
+  background: url("../images/jd2015img.png");
+  background-position: 0 -58px;
+  width: 18px;
+  height: 16px;
+  top: 9px;
+  left: 10px;
+}
+.searchBar_r .total {
+  z-index: 12;
+  top: -4px;
+  left: 100px;
+  padding: 1px 2px;
+  width: auto;
+  min-width: 12px;
+  height: 12px;
+  line-height: 12px;
+  background-color: #c81623;
+  border-radius: 7px 7px 7px 0;
+}
+.searchBar_r ._rightArrow {
+  top: 13px;
+  right: 13px;
+  width: 7px;
+  height: 13px;
+  font: 400 13px/13px simsun;
+}
+.searchBar_r .shoppingCar {
+  cursor: default;
+  z-index: -6;
+  width: 340px;
+  height: 80px;
+  padding-top: 10px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  top: 34px;
+  right: -1px;
+}
+.searchBar_r .shoppingCar .zcar {
+  background: url("../images/settleup-nogoods.png");
+  width: 56px;
+  height: 49px;
+  left: 30px;
+}
+.searchBar_r .shoppingCar h5 {
+  margin-top: 22px;
+  margin-right: 20px;
+}
+._bxsdHover {
+  border-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  background: white;
+}
+.carHover {
+  background: white !important;
+  height: 37px !important;
+}
+.searchBar_b h5 {
+  margin-top: 3px;
+}
+.searchBar_b p {
+  margin-left: 4px;
 }

@@ -50,6 +50,7 @@ ul li{list-style: none;}
 .fcc2a5b2{color: #c2a5b2;}
 .fb{font-weight: bold;}
 .fn{font-weight: normal;}
+.ftn{font-style: normal}
 .t2{text-indent: 2em;}
 .lh16{line-height: 16px;}
 .lh27{line-height: 27px;}
@@ -109,7 +110,6 @@ ul li{list-style: none;}
 .w180{width: 180px;}
 .w230{width: 230px;}
 .w960{width: 960px;}
-.w1210{width: 1210px;}
 .w291{width: 291px;}
 .w310{width: 310px;}
 .w360{width: 360px;}
