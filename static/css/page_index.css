@@ -238,6 +238,7 @@
   right: 50px;
   cursor: pointer;
   border: 1px solid #dddddd;
+  z-index: 12;
 }
 .searchBar_r .delivery {
   height: 34px;
@@ -315,4 +316,7 @@
 }
 .searchBar_b p {
   margin-left: 4px;
+}
+a:hover {
+  color: #cd0a0a;
 }
