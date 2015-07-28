@@ -336,7 +336,7 @@ a:hover {
   /*粮油保健*/
 }
 .menu .menu-ListItem:nth-of-type(1) section {
-  border-top: 0;
+  border-top: 0 !important;
 }
 .menu .menu-ListItem {
   /*&:hover{
@@ -351,6 +351,8 @@ a:hover {
   border-top: 1px dotted white;
 }
 .menu .sideImg {
+  position: relative;
+  display: inline-block;
   background: url("../images/menu.png") no-repeat;
   width: 40px;
   height: 40px;

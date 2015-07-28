@@ -70,37 +70,90 @@ $(function () {
     /*搜索栏部分 -- 结束 --*/
 
 
+
     /*banner 部分 左侧菜单 hover事件 开始*/
     $(".menu-ListItem").hover(
         function(){
-            $(this).parent().parent().addClass("neiYinYing");
-            $(this).addClass("waiYinYing");
-            var imgClass = $(this).find(".sideImg").attr("class").substr(-2);
-            $(this).find(".sideImg").addClass(imgClass + "-hover");
-            $(this).find(".triangle").show();
+
+            var $this = $(this);
+
+            $(".sideBar").show();
+
+            $this.parent().parent().addClass("neiYinYing");
+            $this.addClass("waiYinYing");
+
+
+            $this.find(".triangle").show();
 
             var index = $(this).index();
-            //$(this).find(".sideBar").show();
-            $(".sideBar").show();
             $(".sideBar section").eq(index).show();
+
+            var imgClass = getImgClass(index);
+            $this.find(".sideImg").addClass(imgClass + "-hover");
 
         },
         function () {
-            $(".sideBar section").hover(
+
+            $(".sideBar").hide();
+
+            var $this = $(this);
+
+            $this.parent().parent().removeClass("neiYinYing");
+            $this.removeClass("waiYinYing");
+
+            $this.find(".triangle").hide();
+
+
+            var index = $this.index();
+            var $sideBar = $(".sideBar section").eq(index);
+
+            var imgClass = getImgClass(index);
+            if($this.find(".sideImg").hasClass(imgClass + "-hover")){
+                $this.find(".sideImg").removeClass(imgClass + "-hover");
+            }
+
+
+            $sideBar.hide().hover(
                 function(){
-                    /*var index = $(this).index();
-                    console.log(index);
-                    $(".menu-ListItem").eq(index).addClass("neiYinYing");*/
+
+                    var $this = $(this);
+
+                    $(".sideBar").show();
+
+                    $this.show();
+
+                    var index = $this.index();
+                    var $tarLi = $(".menu-ListItem").eq(index);
+                    $tarLi.parent().parent().removeClass("neiYinYing");
+
+                    $tarLi.parent().parent().addClass("neiYinYing");
+                    $tarLi.addClass("waiYinYing");
+
+                    $tarLi.find(".triangle").show();
+
+                    var imgClass = getImgClass(index);
+                    if($tarLi.find(".sideImg").hasClass(imgClass + "-hover")){
+                        $tarLi.find(".sideImg").removeClass(imgClass + "-hover");
+                    }
+                    $tarLi.find(".sideImg").addClass(imgClass + "-hover");
+
                 },
                 function(){
+
+                    $(".sideBar").hide();
+                    $(this).hide();
                     $(".menu").parent().removeClass("neiYinYing");
+
                     var index = $(this).index();
                     var $tarLi = $(".menu-ListItem").eq(index);
-                    var imgClass =  $tarLi.find(".sideImg").attr("class").substr(-8);
-                    $tarLi.find(".sideImg").removeClass(imgClass);
+
                     $tarLi.find(".triangle").hide();
                     $tarLi.removeClass("waiYinYing");
-                    $(".sideBar").hide();
+
+                    var imgClass = getImgClass(index);
+                    if($tarLi.find(".sideImg").hasClass(imgClass + "-hover")){
+                        $tarLi.find(".sideImg").removeClass(imgClass + "-hover");
+                    }
                 }
             )
         }
@@ -108,3 +161,29 @@ $(function () {
     /*banner 部分 左侧菜单 hover事件 结束*/
 
 })
+
+
+function getImgClass(index){
+    var img = "";
+    switch (index){
+        case 0:
+            img = "sx";
+            break;
+        case 1:
+            img = "mj";
+            break;
+        case 2:
+            img = "yl";
+            break;
+        case 3:
+            img = "sp";
+            break;
+        case 4:
+            img = "bj";
+            break;
+        default:
+            img = ""
+    }
+
+    return img;
+}
