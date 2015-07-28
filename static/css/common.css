@@ -2,6 +2,7 @@
  * Created by Administrator on 2015/7/14.
  */
 @charset "utf-8";
+.w1210{width: 1210px;}
 .w60{width: 60px;}
 .w62{width: 62px;}
 .w313{width: 313px;}
@@ -10,22 +11,34 @@
 .w240{width: 240px;}
 .w518{width: 518px;}
 .h180{height: 180px;}
-.h_70{height: 70%;}
-.h_30{height: 30%;}
 .h45{height: 45px;}
 .h246{height: 246px;}
 .h100{height: 100px;}
-.rt1148{right: 1148px;}
-.w1210{width: 1210px;}
-.w210{width: 210px;}
-.rt0{right: 0;}
-.lh45{line-height: 45px;}
+
 .w_30{width: 30%;}
 .w_70{width: 70%;}
-.txtInt20{text-indent: 20px;}
-.bgdd26b31{background: #d26b31;}
+.h_70{height: 70%;}
+.h_30{height: 30%;}
+
+
 .w370{width: 363px;}
 .w950{width: 950px;}
 .w70{width: 70px;}
+.h412{height: 412px;}
+
+.h_20{height: 20%;}
+.w_20{width: 20%;}
+
+.w200{width: 200px;}
+
+.rt0{right: 0;}
+.rt1148{right: 1148px;}
+.lh45{line-height: 45px;}
 
 .fccd0a0a{color: #cd0a0a;}
+.txtInt20{text-indent: 20px;}
+
+.bdbtom{border-bottom: 2px solid #d26b31}
+
+.bgdd26b31{background: #d26b31;}
+.bgde88a56{background: #e88a56}

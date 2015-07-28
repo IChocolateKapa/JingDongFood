@@ -69,4 +69,42 @@ $(function () {
 
     /*搜索栏部分 -- 结束 --*/
 
+
+    /*banner 部分 左侧菜单 hover事件 开始*/
+    $(".menu-ListItem").hover(
+        function(){
+            $(this).parent().parent().addClass("neiYinYing");
+            $(this).addClass("waiYinYing");
+            var imgClass = $(this).find(".sideImg").attr("class").substr(-2);
+            $(this).find(".sideImg").addClass(imgClass + "-hover");
+            $(this).find(".triangle").show();
+
+            var index = $(this).index();
+            //$(this).find(".sideBar").show();
+            $(".sideBar").show();
+            $(".sideBar section").eq(index).show();
+
+        },
+        function () {
+            $(".sideBar section").hover(
+                function(){
+                    /*var index = $(this).index();
+                    console.log(index);
+                    $(".menu-ListItem").eq(index).addClass("neiYinYing");*/
+                },
+                function(){
+                    $(".menu").parent().removeClass("neiYinYing");
+                    var index = $(this).index();
+                    var $tarLi = $(".menu-ListItem").eq(index);
+                    var imgClass =  $tarLi.find(".sideImg").attr("class").substr(-8);
+                    $tarLi.find(".sideImg").removeClass(imgClass);
+                    $tarLi.find(".triangle").hide();
+                    $tarLi.removeClass("waiYinYing");
+                    $(".sideBar").hide();
+                }
+            )
+        }
+    )
+    /*banner 部分 左侧菜单 hover事件 结束*/
+
 })

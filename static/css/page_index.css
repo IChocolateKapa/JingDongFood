@@ -320,3 +320,144 @@
 a:hover {
   color: #cd0a0a;
 }
+/*banner 部分 开始*/
+.waiYinYing {
+  background: #c46027;
+  box-shadow: 0 0 15px 15px rgba(0, 0, 20, 0.1);
+}
+.neiYinYing {
+  box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.1) inset;
+}
+.menu {
+  /*生鲜食品*/
+  /*中外名酒*/
+  /*饮料冲调*/
+  /*休闲食品*/
+  /*粮油保健*/
+}
+.menu .menu-ListItem:nth-of-type(1) section {
+  border-top: 0;
+}
+.menu .menu-ListItem {
+  /*&:hover{
+      background: #c46027;
+      box-shadow: 0 0 15px 15px rgba(0, 0, 20, .1);
+    }*/
+}
+.menu .menu-ListItem section:nth-of-type(1) {
+  margin: 0 auto;
+  width: 200px;
+  height: 81px;
+  border-top: 1px dotted white;
+}
+.menu .sideImg {
+  background: url("../images/menu.png") no-repeat;
+  width: 40px;
+  height: 40px;
+  top: 13px;
+  left: 8px;
+  transition: 0.2s linear 0s;
+  -webkit-transition: 0.2s linear 0s;
+  -moz-transition: 0.2s linear 0s;
+  -ms-transition: 0.2s linear 0s;
+  -o-transition: 0.2s linear 0s;
+}
+.menu .sx {
+  left: 12px;
+  background-position: 0 -49px;
+}
+.menu .sx-hover {
+  background-position: 0 0;
+}
+.menu .mj {
+  background-position: -39px -49px;
+}
+.menu .mj-hover {
+  background-position: -39px 0;
+}
+.menu .yl {
+  left: 6px;
+  background-position: -80px -49px;
+}
+.menu .yl-hover {
+  background-position: -80px 0;
+}
+.menu .sp {
+  left: 6px;
+  background-position: -119px -49px;
+}
+.menu .sp-hover {
+  background-position: -119px 0;
+}
+.menu .bj {
+  left: 1px;
+  background-position: -159px -49px;
+}
+.menu .bj-hover {
+  background-position: -159px 0;
+}
+.menu h3 {
+  top: -25px;
+  left: 45px;
+}
+.menu .menu-a {
+  width: 153px;
+  height: 30px;
+  word-break: break-all;
+  top: -26px;
+  left: 45px;
+}
+.menu .menu-a a {
+  font-size: 12px;
+  color: white;
+  text-decoration: none;
+  font-family: "Microsoft Yahei";
+}
+.menu .triangle {
+  width: 0;
+  height: 0;
+  right: -6px;
+  top: 40%;
+  z-index: 12;
+  display: none;
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #d26b31;
+}
+.sideBar {
+  display: none;
+  left: 210px;
+  z-index: 10;
+  top: 0;
+  width: 395px;
+  height: 412px;
+  background: #FFF;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  /*h2, h4{
+    margin-left: 12px;
+    margin-top: 4px;
+  }*/
+}
+.sideBar .sideBar-Figure-Nav {
+  padding: 5px;
+  width: 100%;
+}
+.sideBar .sideBar-Figure-Nav li {
+  margin: 2px 10px;
+  line-height: 16px;
+}
+.sideBar .sideBar-Figure-Nav li:not(:last-of-type)::after {
+  content: "|";
+  position: absolute;
+  color: #666;
+  font-size: 10px;
+  top: 2px;
+  right: -13px;
+}
+.sideBar img {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 370px;
+  height: 325px;
+}
+/*banner 部分 结束*/

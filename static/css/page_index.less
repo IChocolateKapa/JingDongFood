@@ -380,3 +380,153 @@
 a:hover{
   color: #cd0a0a;
 }
+
+/*banner 部分 开始*/
+.waiYinYing{
+  background: #c46027;
+  box-shadow: 0 0 15px 15px rgba(0, 0, 20, .1);
+}
+
+.neiYinYing{
+  box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.1) inset;
+}
+.menu{
+  .menu-ListItem:nth-of-type(1){
+    section{
+      border-top: 0;
+    }
+  }
+  .menu-ListItem{
+    section:nth-of-type(1){
+      margin: 0 auto;
+      width: 200px;
+      height: 81px;
+      border-top: 1px dotted white;
+    }
+
+    /*&:hover{
+      background: #c46027;
+      box-shadow: 0 0 15px 15px rgba(0, 0, 20, .1);
+    }*/
+  }
+  .sideImg{
+    background: url("../images/menu.png") no-repeat;
+    width: 40px;
+    height: 40px;
+    top: 13px;
+    left: 8px;
+    .transition(.2s, linear, 0s);
+  }
+  /*生鲜食品*/
+  .sx{
+    left: 12px;
+    background-position: 0 -49px;
+  }
+  .sx-hover{
+    background-position: 0 0;
+  }
+  /*中外名酒*/
+  .mj{
+    background-position: -39px -49px;
+  }
+  .mj-hover{
+    background-position: -39px 0;
+  }
+  /*饮料冲调*/
+  .yl{
+    left: 6px;
+    background-position: -80px -49px;
+  }
+  .yl-hover{
+    background-position: -80px 0;
+  }
+
+  /*休闲食品*/
+  .sp{
+    left: 6px;
+    background-position: -119px -49px;
+  }
+  .sp-hover{
+    background-position: -119px 0;
+  }
+
+  /*粮油保健*/
+  .bj{
+    left: 1px;
+    background-position: -159px -49px;
+  }
+  .bj-hover{
+    background-position: -159px 0;
+  }
+
+  h3{
+    top: -25px;
+    left: 45px;
+  }
+  .menu-a{
+    width: 153px;
+    height: 30px;
+    //white-space: pre-line;
+    word-break: break-all;
+    top: -26px;
+    left: 45px;
+    a{
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+      font-family: "Microsoft Yahei";
+    }
+  }
+
+  .triangle{
+    width: 0;
+    height: 0;
+    right: -6px;
+    top: 40%;
+    z-index: 12;
+    display: none;
+    border-style: solid;
+    border-width: 6px 0 6px 6px;
+    border-color: transparent transparent transparent #d26b31;
+  }
+}
+
+.sideBar{
+  display: none;
+  left: 210px;
+  z-index: 10;
+  top: 0;
+  width: 395px;
+  height: 412px;
+  background: #FFF;
+  box-shadow: 0 0 50px rgba(0,0,0,.3);
+  .sideBar-Figure-Nav {
+    padding: 5px;
+    width: 100%;
+    li{
+      margin: 2px 10px;
+      line-height: 16px;
+    }
+  }
+  .sideBar-Figure-Nav li:not(:last-of-type)::after{
+    content: "|";
+    //display: block;
+    position: absolute;
+    color: #666;
+    font-size: 10px;
+    top: 2px;
+    right: -13px;
+  }
+
+  /*h2, h4{
+    margin-left: 12px;
+    margin-top: 4px;
+  }*/
+  img{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 370px;
+    height: 325px;
+  }
+}
+/*banner 部分 结束*/
