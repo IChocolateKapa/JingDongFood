@@ -14,6 +14,10 @@
 .h45{height: 45px;}
 .h246{height: 246px;}
 .h100{height: 100px;}
+.h60{height: 60px;}
+.h30{height: 30px;}
+
+/*.h45{height: 45px;}*/
 
 .w_30{width: 30%;}
 .w_70{width: 70%;}
@@ -31,14 +35,29 @@
 
 .w200{width: 200px;}
 
+.rt9{right: 9px;}
 .rt0{right: 0;}
 .rt1148{right: 1148px;}
+.tp65{top: 65px;}
+.lh20{line-height:  20px;}
 .lh45{line-height: 45px;}
 
+.vm{vertical-align: middle;}
+
 .fccd0a0a{color: #cd0a0a;}
+.fce4393c{color: #e4393c;}
+.fcff9600{color: #ff9600;}
 .txtInt20{text-indent: 20px;}
 
-.bdbtom{border-bottom: 2px solid #d26b31}
+.bdbtom{border-bottom: 2px solid #d26b31;}
 
 .bgdd26b31{background: #d26b31;}
-.bgde88a56{background: #e88a56}
+.bgde88a56{background: #e88a56;}
+
+.bgd-chihuo{background: #41adeb;}
+.bgd-rouchuan{background: #fba75c;}
+.bgd-putao{background: #310777;}
+.bgd-jiushui{background: #ffcc01;}
+
+
+/*.bgd-*/

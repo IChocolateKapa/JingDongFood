@@ -160,6 +160,38 @@ $(function () {
     )
     /*banner 部分 左侧菜单 hover事件 结束*/
 
+
+
+
+    /*banner 中间动图 开始*/
+    setTimeout(function(){
+        $(".trigger-a:nth-of-type(1)").addClass("_triggerHover");
+    }, 100);
+
+    //$(".banner").attr("class", "banner");
+    /*鼠标滑过 trigger时 变换背景和大图 --开始-- */
+
+    $('.trigger-a').mouseenter(function(){
+        var index = $(this).index();
+        bannerAnimate($(this), index);
+        //clearInterval(Timer);
+    })
+    $('.ui-slide-trigger').mouseleave(function(){
+        //autoSlide();
+        $(".trigger-a").removeClass("_triggerHover");
+    })
+
+
+    /*$(".trigger-a").hover(
+        function(){
+            $(".trigger-a").removeClass("_triggerHover");
+        }
+    )*/
+    /*鼠标滑过 trigger时 变换背景和大图 --结束-- */
+
+
+    /*banner 中间动图 结束*/
+
 })
 
 
@@ -186,4 +218,68 @@ function getImgClass(index){
     }
 
     return img;
+}
+
+function getImgName(index){
+    var img = "";
+    switch (index){
+        case 0:
+            img = "bgd-chihuo";
+            break;
+        case 1:
+            img = "bgd-rouchuan";
+            break;
+        case 2:
+            img = "bgd-putao";
+            break;
+        case 3:
+            img = "bgd-jiushui";
+            break;
+        default:
+            img = "bgd-chihuo"
+    }
+
+    return img;
+}
+
+
+function bannerAnimate($obj, index){
+    $(".banner").attr("class", "banner");
+    $(".banner").addClass(getImgName(index));
+
+    $obj.addClass("_triggerHover");
+
+
+    $(".banner-m-img").removeClass("curr");
+    $(".banner-m-img").eq(index).addClass("curr");
+
+    var $img_l = $(".banner-m-img").eq(index).find(".img-l");
+    $img_l.animate({
+        'opacity': "1"
+    }, 200)
+
+
+    setTimeout(function(){
+        var $img_r = $(".banner-m-img").eq(index).find(".img-r");
+
+        $img_r.animate({
+            "opacity": '1'
+        }, 50);
+
+        $img_r.animate({
+            "right": '30px'
+        }, 100);
+        $img_r.animate({
+            "right": '10px'
+        }, 50);
+        $img_r.animate({
+            "right": '20px'
+        }, 80);
+    }, 100)
+
+}
+
+
+function autoSlide(){
+
 }

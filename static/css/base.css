@@ -94,7 +94,7 @@ ul li{list-style: none;}
 .none{display: none;}
 .inlineBlock{display: inline-block;}
 .listItem{display: list-item;}
-.block{display: block;}
+.block{display: block !important;}
 .outNone{outline: none;}
 .zIndex10{z-index: 10;}
 .zIndex40{z-index: 40;}
