@@ -323,10 +323,10 @@ a:hover {
 /*banner 部分 开始*/
 .waiYinYing {
   background: #c46027;
-  box-shadow: 0 0 15px 15px rgba(0, 0, 20, 0.1);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 20, 0.1);
 }
 .neiYinYing {
-  box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 0 8px 3px rgba(0, 0, 0, 0.1) inset;
 }
 .menu {
   /*生鲜食品*/
@@ -339,6 +339,7 @@ a:hover {
   border-top: 0 !important;
 }
 .menu .menu-ListItem {
+  z-index: 11;
   /*&:hover{
       background: #c46027;
       box-shadow: 0 0 15px 15px rgba(0, 0, 20, .1);
