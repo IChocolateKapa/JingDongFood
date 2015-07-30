@@ -16,6 +16,11 @@
 .h100{height: 100px;}
 .h60{height: 60px;}
 .h30{height: 30px;}
+.w300{width: 300px;}
+.w890{width: 890px;}
+.pd10{
+    padding: 10px;
+}
 
 /*.h45{height: 45px;}*/
 
@@ -29,12 +34,19 @@
 .w950{width: 950px;}
 .w70{width: 70px;}
 .h412{height: 412px;}
+.h495{height: 495px;}
+.h600{height: 600px;}
 
 .h_20{height: 20%;}
 .w_20{width: 20%;}
 
 .w200{width: 200px;}
 
+.ml10{margin-left: 10px;}
+.ml20{margin-left: 20px;}
+
+.pdlr10{padding: 2px 10px;}
+.lt20{left: 20px;}
 .rt9{right: 9px;}
 .rt0{right: 0;}
 .rt1148{right: 1148px;}
@@ -44,10 +56,15 @@
 
 .vm{vertical-align: middle;}
 
+.pd20{padding: 20px;}
+
 .fccd0a0a{color: #cd0a0a;}
 .fce4393c{color: #e4393c;}
 .fcff9600{color: #ff9600;}
 .txtInt20{text-indent: 20px;}
+.txtlth{
+    text-decoration: line-through;
+}
 
 .bdbtom{border-bottom: 2px solid #d26b31;}
 
@@ -58,6 +75,12 @@
 .bgd-rouchuan{background: #fba75c;}
 .bgd-putao{background: #310777;}
 .bgd-jiushui{background: #ffcc01;}
+.bgd-miaosha{background: #fff7e4;}
+.bgd-liji{background: #cd0a0a;}
+
+.bgd-morning{background: url("../images/miaosha/morning.png") no-repeat;}
+.bgd-noon{background: url("../images/miaosha/noon.png") no-repeat;}
+.bgd-night{background: url("../images/miaosha/night.png") no-repeat;}
 
 
 /*.bgd-*/

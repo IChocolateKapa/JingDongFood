@@ -644,3 +644,317 @@ a:hover{
 
 
 /*banner 部分 结束*/
+
+
+/*秒杀部分 -- 开始*/
+.miaosha-l{
+  height: 440px;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  margin-top: 11px;
+  overflow: hidden;
+  .miaosha-l-timeline{
+    height: 120px;
+    .timeline{
+      height: 100px;
+      width: 500px;
+      left: 120px;
+      top: 20px;
+      .line{
+        height: 4px;
+        width: 500px;
+        background: #ffffff;
+        border-radius: 4px;
+        top: 40px;
+        z-index: 1;
+      }
+      .clock{
+        top: -18px;
+        z-index: 5;
+        width: 60px;
+        height: 70px;
+        position: absolute;
+        display: inline-block;
+        font-style: normal;
+        background: url("../images/miaosha/clock.png") no-repeat;
+      }
+      .morning{
+        left: -22px;
+        background-position: 0 0;
+      }
+      .noon{
+        left: 226px;
+        background-position: -63px 0;
+      }
+      .night{
+        left: 474px;
+        background-position: -128px 0;
+      }
+      .timeline-item{
+        top: 50px;
+
+        .curr i {
+          background: #ffad00;
+          box-shadow: 0 0 0 6px rgba(255,173,0,.34)
+        }
+        .curr span{
+          background: #f87002;
+          color: white;
+          em{
+            display: inline-block;
+          }
+        }
+        p{
+          top: 15px;
+          width: 180px;
+          height: 30px;
+
+          i{
+            top: -19px;
+            z-index: 3;
+            height: 15px;
+            width: 15px;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(255,255,255,.5);
+          }
+          span{
+            left: -43%;
+            background: transparent;
+            color: #676767;
+            line-height: 30px;
+            border-radius: 5px;
+            letter-spacing: .04em;
+            em{
+              display: none;
+            }
+          }
+        }
+        p:nth-of-type(2){
+           left: 250px;
+         }
+        p:nth-of-type(3){
+          left: 500px;
+        }
+      }
+    }
+    .daojishi{
+      top: 20px;
+      right: 20px;
+      height: 100px;
+      width: 160px;
+      h6{
+        margin-bottom: 5px;
+      }
+      i{
+
+      }
+      span{
+        display: inline-block;
+        padding: 3px;
+        background: #666666;
+        border-radius: 5px;
+        height: 30px;
+        width: 30px;
+      }
+    }
+    .sun{
+      background: url("../images/miaosha/sun.png");
+      display: inline-block;
+      height: 149px;
+      width: 149px;
+      position: absolute;
+      top: -15px;
+      left: -35px;
+      z-index: 0;
+      -webkit-animation: rotate-infinite 15s linear 0s infinite;
+      animation: rotate-infinite 15s linear 0s infinite;
+    }
+  }
+  .miaosha-l-ul ul{
+    height: 300px;
+    li{
+      height: 280px;
+      margin-left: 10px;
+    }
+    li:nth-of-type(1){
+      margin-left: 35px;
+    }
+  }
+}
+
+@keyframes rotate-infinite {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(359deg);}
+ }
+@-webkit-keyframes rotate-infinite {
+  0%{-weblit-transform: rotate(0deg);}
+  100%{-webkit-transform: rotate(359deg);}
+}
+
+.miaosha-r{
+  //width: 290px;
+  height: 440px;
+}
+/*秒杀部分 -- 结束*/
+
+
+/*零食冷柜部分 开始*/
+
+.title{
+  height: 30px;
+  h3{
+    margin-right: 10px;
+  }
+  .title-ListItem{
+    display: inline-block;
+    height: 26px;
+    position: relative;
+    line-height: 26px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    padding: 2px 8px;
+    background: #ffffff;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0 0 2px white;
+    text-decoration: none;
+    margin-right: 3px;
+    //.transition();
+    -webkit-transition: border-color .1s,color .1s;
+    -moz-transition: border-color .1s,color .1s;
+    -o-transition: border-color .1s,color .1s;
+    -ms-transition: border-color .1s,color .1s;
+    transition: border-color .1s,color .1s;
+    &:hover{
+      padding: 0 7px;
+      color: #cd0a0a;
+      border: 2px solid #cd0a0a;
+    }
+    i{
+      display: none;
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: url("../images/common/commonPic.png") no-repeat;
+    }
+  }
+  .curr{
+    padding: 0 7px;
+    border: 2px solid #cd0a0a;
+  }
+  .curr i{
+    display: inline-block;
+  }
+}
+
+.snacks{
+  width: 808px;
+  .snacks-content{
+    height: 546px;
+  }
+  .snacks-contentItem{
+    opacity: 0;
+    z-index: 0;
+    height: 510px;
+    .snacks-contentItem-l{
+      width: 225px;
+      margin-right: 10px;
+    }
+    .snacks-contentItem-l-a{
+      background: #eee;
+      color: #b2b2b2;
+      font-weight: 800;
+      font-family: "Microsoft Yahei";
+      display: inline-block;
+      position: absolute;
+      text-decoration: none;
+      text-align: center;
+      //padding: 10px;
+      &:hover{
+        background: #E33A3D;
+        color: white;
+      }
+    }
+    .selected{
+      background: #E33A3D;
+      color: white;
+    }
+    .item1,
+    .item2{
+      font-size: 24px;
+      line-height: 120px;
+      width: 129px;
+      height: 129px;
+      left: 10px;
+    }
+    .item1{
+      top: 10px;
+    }
+    .item2{
+      top: 150px;
+    }
+    .item3,
+    .item4,
+    .item5{
+      font-size: 18px;
+      line-height: 83px;
+      width: 83px;
+      height: 83px;
+      left: 149px;
+    }
+    .item3{
+      top: 10px;
+    }
+    .item4{
+       top: 103px;
+     }
+    .item5{
+      top: 196px;
+    }
+
+    .item6,
+    .item7{
+      font-size: 20px;
+      line-height: 107px;
+      width: 107px;
+      height: 107px;
+      top: 290px;
+    }
+    .item6{
+      left: 10px;
+    }
+    .item7{
+      left: 127px;
+    }
+    .item8{
+      font-size: 24px;
+      line-height: 107px;
+      width: 223px;
+      height: 107px;
+      top: 408px;
+      left: 10px;
+    }
+
+    .snacks-contentItem-r{
+      width: 536px;
+    }
+  }
+  .curr{
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+.freezer{
+  width: 390px;
+  .freezer-content{
+    height: 546px;
+    width: 100%;
+  }
+}
+
+/*零食冷柜部分 结束*/
