@@ -67,6 +67,20 @@
   -ms-transition: @duration @animate @delay;
   -o-transition: @duration @animate @delay;
 }
+.transition-all(@attr:all, @duration:.1s, @animate:linear, @delay:0s){
+  transition: @arguments;
+  -webkit-transition: @arguments;
+  -moz-transition: @arguments;
+  -ms-transition: @arguments;
+  -o-transition: @arguments;
+}
+.transition-org(@trans){
+  transition: @trans;
+  -webkit-transition: @trans;
+  -moz-transition: @trans;
+  -ms-transition: @trans;
+  -o-transition: @trans;
+}
 /* -- 过渡 结束 -- */
 
 
@@ -1046,11 +1060,7 @@ a:hover{
       box-shadow: 0 0 3px #999;
       //.transition(.2s, linear 0s);
       /*要指定变换的属性是什么*/
-      -webkit-transition: all .2s linear .2s;
-      -moz-transition: all .2s linear .2s;
-      -ms-transition: all .2s linear .2s;
-      -o-transition: all .2s linear .2s;
-      transition: all .2s linear .2s;
+      .transition-all(all .2s linear .2s;);
 
       a:nth-of-type(1){
         display: inline-block;
@@ -1120,3 +1130,156 @@ a:hover{
   padding: 20px 0 0 420px;
 }
 /*新鲜速递部分 -- 结束 --*/
+
+/*名酒柜 开始*/
+/*名酒柜 结束*/
+
+/*美食地理 开始*/
+.meishi-l{
+  background: url("../images/meishi/meishi1.png") no-repeat;
+}
+._addr{
+  width: 580px;
+  height: 180px;
+}
+._content{
+  width: 580px;
+  height: 258px;
+  ul{
+    display: none;
+  }
+}
+._contentListItem{
+  width: 144px;
+  height: 258px;
+  border-right: 1px solid #e8e8e8;;
+  &>a{
+    width: 144px;
+    height: 124px;
+    margin-top: 15px;
+  }
+  &>div{
+    width: 130px;
+    span{
+      margin-top: 5px;
+    }
+    a:nth-of-type(1){
+      height: 36px;
+      line-height: 18px;
+    }
+    a:nth-of-type(2){
+      margin-top: 10px;
+      background: #f5f5f5;
+      width: 90px;
+      height: 22px;
+      line-height: 22px;
+      border: 1px solid #999;
+      border-radius: 4px;
+    }
+  }
+}
+
+._addr-label{
+  z-index: 6;
+  width: 56px;
+  height: 64px;
+  position: absolute;
+  display: inline-block;
+  font-style: normal;
+  background: url("../images/common/commonPic.png") no-repeat;
+}
+
+._car{
+  top: 96px;
+  left: 50px;
+  background-position: -22px 0;
+}
+.meishi-r{
+  background: url("../images/meishi/meishi2.png") no-repeat;
+}
+
+._addrDot{
+  top: 40px;
+  left: 78px;
+  height: 130px;
+  width: 440px;
+  p{
+    width: 60px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    .transition-all(all, .2s, linear, 2s;);
+    //line-height: 20px;
+    &:hover{
+      &>i{
+        box-shadow: 0 0 0 6px rgba(255,255,255,.3);
+      }
+
+    }
+    &>i{
+      top: 0;
+      left: 40%;
+      margin-right: 15px;
+      position: absolute;
+      display: block;
+      height: 15px;
+      width: 15px;
+      .border-radius(50%);
+      background: #FFF;
+      overflow: hidden;
+      box-shadow: 0 0 0 4px rgba(255,255,255,.4);
+      .transition-all(all, .2s, linear, 0s);
+    }
+    &>span{
+      left: 0;
+      bottom: -13px;
+      width: 60px;
+    }
+  }
+
+  p.curr i{
+    background: #ffad00;
+    box-shadow: 0 0 0 6px rgba(255,173,0,.34);
+  }
+  p.jlin{
+    top: 110px;
+    left: -30px;
+  }
+  p.jzhe{
+    top: 70px;
+    left: 6px;
+  }
+  p.nmeng{
+    left: 50px;
+    top: 50px;
+  }
+  p.schuan{
+    top: 65px;
+    left: 99px;
+  }
+  p.hnan{
+    left: 142px;
+    top: 88px;
+  }
+  p.hbei{
+    left: 188PX;
+    top: 99px;
+  }
+  p.fjian{
+    left: 237px;
+    top: 94px;
+  }
+  p.xzang{
+    left: 290px;
+    top: 71px;
+  }
+  p.sxi{
+    left: 338px;
+    top: 63px;
+  }
+  p.gatai{
+    top: 74px;
+    left: 392px;
+  }
+}
+/*美食地理 结束*/

@@ -52,4 +52,41 @@ $(function () {
             })
         }
     )
+
+
+
+    /*美食地理*/
+    /*合理设置定时器，实现delay后hover事件才触发的方法*/
+    var carTime;
+    $('._addrDot p').mouseenter(function(){
+        var $this = $(this);
+        var index = $this.index();
+        var thisTop = $this.position().top;
+        var thisLeft = $this.position().left;
+        var carTop = thisTop - 14;
+        var carLeft = thisLeft + 80;
+
+        carTime = setTimeout(function(){
+            carAnimate($this, index, carTop, carLeft);
+        }, 500)
+
+    })
+
+    $('._addrDot p').mouseleave(function(){
+        clearTimeout(carTime);
+    })
+
 })
+
+
+function carAnimate($obj, index, bot, left){
+    $('._addrDot p').removeClass("curr");
+    $obj.addClass("curr");
+    $("._car").animate({
+        'top': bot +'px',
+        'left': left + 'px'
+    }, 500)
+
+    $("._content ul").removeClass("block");
+    $("._content ul").eq(index).addClass("block");
+}
