@@ -57,8 +57,9 @@ $(function () {
 
     /*美食地理*/
     /*合理设置定时器，实现delay后hover事件才触发的方法*/
+    /*左侧汽车*/
     var carTime;
-    $('._addrDot p').mouseenter(function(){
+    $('.meishi-l ._addrDot p').mouseenter(function(){
         var $this = $(this);
         var index = $this.index();
         var thisTop = $this.position().top;
@@ -72,21 +73,54 @@ $(function () {
 
     })
 
-    $('._addrDot p').mouseleave(function(){
+    $('.meishi-l ._addrDot p').mouseleave(function(){
         clearTimeout(carTime);
     })
+
+    /*右侧飞机*/
+    var planeTime;
+    $('.meishi-r ._addrDot p').mouseenter(function(){
+        var $this = $(this);
+        var index = $this.index();
+        var thisTop = $this.position().top;
+        var thisLeft = $this.position().left;
+        var carTop = thisTop - 15;
+        var carLeft = thisLeft + 80;
+
+        planeTime = setTimeout(function(){
+            planeAnimate($this, index, carTop, carLeft);
+        }, 500)
+
+    })
+
+    $('.meishi-r ._addrDot p').mouseleave(function(){
+        clearTimeout(planeTime);
+    })
+
 
 })
 
 
 function carAnimate($obj, index, bot, left){
-    $('._addrDot p').removeClass("curr");
+    $('.meishi-l ._addrDot p').removeClass("curr");
     $obj.addClass("curr");
     $("._car").animate({
         'top': bot +'px',
         'left': left + 'px'
     }, 500)
 
-    $("._content ul").removeClass("block");
-    $("._content ul").eq(index).addClass("block");
+    $(".meishi-l ._content ul").removeClass("block");
+    $(".meishi-l ._content ul").eq(index).addClass("block");
+}
+
+function planeAnimate($obj, index, bot, left){
+    $('.meishi-r ._addrDot p').removeClass("curr");
+    $obj.addClass("curr");
+    $("._plane").animate({
+        'top': bot +'px',
+        'left': left + 'px'
+    }, 500)
+
+    $(".meishi-r ._content ul").removeClass("block");
+    $(".meishi-r ._content ul").eq(index).addClass("block");
 }

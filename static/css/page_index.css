@@ -1114,6 +1114,11 @@ a:hover {
   left: 50px;
   background-position: -22px 0;
 }
+._plane {
+  top: 0;
+  left: 59px;
+  background-position: -92px 0;
+}
 .meishi-r {
   background: url("../images/meishi/meishi2.png") no-repeat;
 }
@@ -1122,6 +1127,7 @@ a:hover {
   left: 78px;
   height: 130px;
   width: 440px;
+  /*右侧*/
 }
 ._addrDot p {
   width: 60px;
@@ -1206,6 +1212,54 @@ a:hover {
 }
 ._addrDot p.gatai {
   top: 74px;
-  left: 392px;
+  left: 394px;
+}
+._addrDot p.t-r > span {
+  left: 46px;
+  bottom: 11px;
+  text-align: left;
+}
+._addrDot p.fguo {
+  top: 15px;
+  left: -21px;
+}
+._addrDot p.fguo > span {
+  text-align: right;
+  left: -45px;
+  bottom: 12px;
+}
+._addrDot P.dguo {
+  top: 10px;
+  left: 7px;
+}
+._addrDot p.xbya {
+  top: 40px;
+  left: -36px;
+}
+._addrDot p.ydli {
+  top: 35px;
+  left: 10px;
+}
+._addrDot p.tguo {
+  top: 80px;
+  left: 160px;
+}
+._addrDot p.ozhou {
+  top: 110px;
+  left: 175px;
+}
+._addrDot p.rhan {
+  top: 52px;
+  left: 203px;
+}
+._addrDot p.mguo {
+  top: 40px;
+  left: 320px;
 }
 /*美食地理 结束*/
+/*我 渴了 饿了 闲了 馋了 开始*/
+.kxec-l {
+  width: 240px;
+  height: 360px;
+}
+/*我 渴了 饿了 闲了 馋了 结束*/
