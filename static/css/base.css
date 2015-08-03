@@ -33,6 +33,7 @@ ul li{list-style: none;}
 .f32{font-size: 32px;}
 .f36{font-size: 36px;}
 .f42{font-size: 42px;}
+.f48{font-size: 48px;}
 .ffMy{font-family: 'Microsoft Yahei';}
 .ffTm{font-family: 'tahoma'}
 .fcWhite{color: white}
@@ -191,6 +192,7 @@ ul li{list-style: none;}
 .mt19{margin-top: 19px;}
 .mt26{margin-top: 26px;}
 .mt32{margin-top: 33px;}
+.mt40{margin-top: 40px;}
 .mt49{margin-top: 49px;}
 .ml-1{margin-left: -1px;}
 .ml5{margin-left: 5px;}

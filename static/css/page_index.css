@@ -1053,6 +1053,9 @@ a:hover {
   height: 296px;
   padding: 20px 0 0 420px;
 }
+.xinxianContent-r .toCar {
+  width: 140px;
+}
 /*新鲜速递部分 -- 结束 --*/
 /*名酒柜 开始*/
 /*名酒柜 结束*/
@@ -1260,6 +1263,166 @@ a:hover {
 /*我 渴了 饿了 闲了 馋了 开始*/
 .kxec-l {
   width: 240px;
-  height: 360px;
+  height: 410px;
+  left: 16px;
+}
+.kxec-l-title {
+  z-index: 2;
+  top: -16px;
+  left: -16px;
+  height: 116px;
+  width: 256px;
+  line-height: 160px;
+}
+.kxec-l-menu {
+  width: 240px;
+  height: 410px;
+  background-size: cover;
+}
+.kxec-l-menu ul {
+  z-index: 2;
+  top: 150px;
+  left: 125px;
+}
+.kxec-l-menu li {
+  width: 115px;
+  height: 44px;
+  margin-bottom: 7px;
+  vertical-align: middle;
+}
+.kxec-l-menu li a {
+  width: 90px;
+  cursor: default;
+  text-decoration: none;
+  border-radius: 22px 0 0 22px;
+  line-height: 44px;
+  height: 44px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.4);
+  transition: all 0.2s linear 0.05s;
+  -webkit-transition: all 0.2s linear 0.05s;
+  -moz-transition: all 0.2s linear 0.05s;
+  -ms-transition: all 0.2s linear 0.05s;
+  -o-transition: all 0.2s linear 0.05s;
+}
+.kxec-l-menu li a:hover {
+  color: white;
+}
+.kxec-l-menu .curr a {
+  width: 115px;
+}
+.kxec-r {
+  width: 954px;
+  height: 456px;
+  top: -18px;
+}
+.kxec-r ._content {
+  width: 914px;
+  height: 456px;
+}
+.kxec-r ._content ._contentListItem {
+  width: 164px;
+  height: 214px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.kxec-r ._content ._contentListItem > a {
+  height: 100px;
+}
+.kxec-r ._content ._contentListItem > div > a:nth-of-type(1) {
+  height: 20px;
+}
+.kxec-r ._content ._contentListItem > div > span {
+  margin-top: 0;
+}
+.kxec-r ._content ._contentListItem > div > a:nth-of-type(2) {
+  margin-top: 0;
+}
+.kxec-r ._content ._contentListItem:nth-of-type(6),
+.kxec-r ._content ._contentListItem:nth-of-type(7),
+.kxec-r ._content ._contentListItem:nth-of-type(8),
+.kxec-r ._content ._contentListItem:nth-of-type(9),
+.kxec-r ._content ._contentListItem:nth-of-type(10) {
+  border-bottom: transparent;
+}
+.kxec-r-imgList {
+  height: 450px;
+  width: 130px;
+  right: -1px;
+  top: 0;
+}
+.kxec-r-imgList ul {
+  display: none;
+}
+.kxec-r-imgList li {
+  position: relative;
+  height: 85px;
+  line-height: 85px;
+  border-bottom: 1px solid #e8e8e8;
+  text-align: center;
+  vertical-align: middle;
+}
+.kxec-r-imgList li:nth-of-type(5) {
+  border-bottom: transparent;
+}
+.kxec-r-imgList li:hover::before {
+  z-index: 10;
+  content: "";
+  display: block;
+  visibility: visible;
+  position: absolute;
+  width: 130px;
+  height: 85px;
+  left: -1px;
+  background: rgba(67, 172, 231, 0.8);
+}
+.kxec-r-imgList li:hover span {
+  visibility: visible;
+}
+.kxec-r-imgList li a {
+  width: 130px;
+  height: 85px;
+  text-align: center;
+  text-decoration: none;
+}
+.kxec-r-imgList li a img {
+  vertical-align: middle;
+}
+.kxec-r-imgList li span {
+  z-index: 15;
+  visibility: hidden;
+  line-height: 90px;
+  width: 130px;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+.ke {
+  background: url("../images/kele/kele.jpg") no-repeat;
+}
+.ke .curr a {
+  background: rgba(67, 172, 231, 0.8);
+}
+.xian {
+  background: url("../images/kele/xianle.jpg") no-repeat;
+}
+.xian .curr a {
+  background: rgba(255, 152, 30, 0.8);
+}
+.ele {
+  background-image: url("../images/kele/ele.jpg");
+}
+.ele .curr a {
+  background: rgba(255, 74, 74, 0.8);
+}
+.chan {
+  background-image: url("../images/kele/chanle.jpg");
+}
+.chan .curr a {
+  background: rgba(137, 212, 40, 0.8);
+}
+.xian ul,
+.ele ul,
+.chan ul {
+  top: 150px;
 }
 /*我 渴了 饿了 闲了 馋了 结束*/
