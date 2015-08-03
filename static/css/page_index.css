@@ -285,7 +285,7 @@
   cursor: default;
   z-index: -6;
   width: 340px;
-  height: 80px;
+  height: 90px;
   padding-top: 10px;
   border: 1px solid #dddddd;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -499,15 +499,17 @@ a:hover {
 .banner .banner-m .banner-m-img {
   z-index: 0;
   opacity: 0;
-  transition: 0.2s linear 0s;
-  -webkit-transition: 0.2s linear 0s;
-  -moz-transition: 0.2s linear 0s;
-  -ms-transition: 0.2s linear 0s;
-  -o-transition: 0.2s linear 0s;
+  transition: all 0.2s linear 0.5s;
+  -webkit-transition: all 0.2s linear 0.5s;
+  -moz-transition: all 0.2s linear 0.5s;
+  -ms-transition: all 0.2s linear 0.5s;
+  -o-transition: all 0.2s linear 0.5s;
 }
-.banner .banner-m .curr {
-  z-index: 10;
-  opacity: 1;
+.banner .banner-m div.banner-m-img {
+  height: 412px;
+  width: 726px;
+  z-index: 3;
+  background: whitesmoke;
 }
 .banner .banner-m .img-l {
   width: 340px;
@@ -517,22 +519,30 @@ a:hover {
   opacity: 0;
   margin-left: 20px;
   top: 20px;
-  transition: 0.1s linear 0.2s;
-  -webkit-transition: 0.1s linear 0.2s;
-  -moz-transition: 0.1s linear 0.2s;
-  -ms-transition: 0.1s linear 0.2s;
-  -o-transition: 0.1s linear 0.2s;
+  transition: all 0.1s linear 0.2s;
+  -webkit-transition: all 0.1s linear 0.2s;
+  -moz-transition: all 0.1s linear 0.2s;
+  -ms-transition: all 0.1s linear 0.2s;
+  -o-transition: all 0.1s linear 0.2s;
 }
 .banner .banner-m .img-r {
   opacity: 0;
   width: 300px;
   height: 370px;
   float: right;
-  z-index: 2;
+  z-index: 1;
   right: -120px;
   top: 10px;
+  transition: all 0.1s linear 0.2s;
+  -webkit-transition: all 0.1s linear 0.2s;
+  -moz-transition: all 0.1s linear 0.2s;
+  -ms-transition: all 0.1s linear 0.2s;
+  -o-transition: all 0.1s linear 0.2s;
 }
-.banner .banner-m .animate .img-l {
+.banner .banner-m .curr,
+.banner .banner-m .curr .img-l,
+.banner .banner-m .curr .img-r {
+  z-index: 2;
   opacity: 1;
 }
 .banner .banner-r {
@@ -540,6 +550,7 @@ a:hover {
   height: 394px;
   top: 8px;
   right: 0;
+  z-index: 8;
 }
 .banner .banner-r .curDay {
   right: 81px;

@@ -2,25 +2,25 @@
  * Created by Administrator on 2015/8/3.
  */
 $(function () {
-    /*ø ¡À*/
+    /*Ê∏¥‰∫Ü*/
     $(".ke li").hover(function(){
         var $this = $(this);
         kxec_func(".ke", $this);
     })
 
-    /*œ–¡À*/
+    /*Èó≤‰∫Ü*/
     $(".xian li").hover(function(){
         var $this = $(this);
         kxec_func(".xian", $this);
     })
 
-    /*∂ˆ¡À*/
+    /*È•ø‰∫Ü*/
     $(".ele li").hover(function(){
         var $this = $(this);
         kxec_func(".ele", $this);
     })
 
-    /*≤ˆ¡À*/
+    /*È¶ã‰∫Ü*/
     $(".chan li").hover(function(){
         var $this = $(this);
         kxec_func(".chan", $this);

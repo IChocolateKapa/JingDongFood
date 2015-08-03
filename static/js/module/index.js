@@ -3,7 +3,7 @@
  */
 $(function () {
 
-    /*nav hover 效果 -- 开始*/
+    /*网站顶部导航 hover 效果 -- 开始*/
     $(".navListItem").hover(
         function(){
             $(this).find(".delivery").addClass("_navHover");
@@ -18,9 +18,6 @@ $(function () {
         }
     )
 
-    /*nav hover 效果 -- 结束 */
-
-
     /*导航栏中 a hover事件 -- 开始 --*/
     $(".deliveryCity .city a").click(function(){
         $(".deliveryCity .city a").each(function(){
@@ -32,10 +29,11 @@ $(function () {
 
     /*导航栏中 a hover事件 -- 结束 --*/
 
-    //$(".deliveryCity>a").wrap("<div class='city'></div>");
-    //$(".deliveryCity a").each(function(){
-    //    $(this).removeClass("city");
-    //})
+    /*网站顶部导航 hover 效果 -- 结束 */
+
+
+
+
 
     /*搜索栏部分 -- 开始 --*/
 
@@ -85,7 +83,7 @@ $(function () {
 
             $this.find(".triangle").show();
 
-            var index = $(this).index();
+            var index = $this.index();
             $(".sideBar section").eq(index).show();
 
             var imgClass = getImgClass(index);
@@ -250,17 +248,17 @@ function bannerAnimate($obj, index){
     $obj.addClass("_triggerHover");
 
 
-    $(".banner-m-img").removeClass("curr");
-    $(".banner-m-img").eq(index).addClass("curr");
+    $("section.banner-m-img").removeClass("curr");
+    $("section.banner-m-img").eq(index).addClass("curr");
 
-    var $img_l = $(".banner-m-img").eq(index).find(".img-l");
+    var $img_l = $("section.banner-m-img").eq(index).find(".img-l");
     $img_l.animate({
         'opacity': "1"
     }, 200)
 
 
     setTimeout(function(){
-        var $img_r = $(".banner-m-img").eq(index).find(".img-r");
+        var $img_r = $("section.banner-m-img").eq(index).find(".img-r");
 
         $img_r.animate({
             "opacity": '1'
@@ -280,6 +278,41 @@ function bannerAnimate($obj, index){
 }
 
 
-function autoSlide(){
-
+//定义背景颜色
+var colorList = {
+    'slide0': {
+        bgColor: "#E64346"
+    },
+    'slide1': {
+        bgColor: "#EE7900"
+    },
+    'slide2': {
+        bgColor: "#6F9502"
+    },
+    'slide3': {
+        bgColor: "#300676"
+    }
+};
+//banner计时器
+var timer_auto;
+function autoSlide () {
+    timer_auto = window.setInterval(function(){
+        var index = $("._triggerHover").index();
+        var nextIndex = index + 1;
+        var maxIndex = $(".trigger-a").length;
+        if(nextIndex >= maxIndex){
+            nextIndex = 0;
+        }
+        var nextEle = $('.trigger-a').eq(nextIndex);
+        bannerStyle(nextEle, nextIndex);
+    }, 2000)
+}
+//变化样式
+function bannerStyle(ele, index){
+    $('.trigger-a').removeClass('_triggerHover');
+    ele.addClass('_triggerHover');
+    $('.Banner').removeClass('select').eq(index).stop().addClass('select').animate({opacity:1},600);
+    $('.Banner .bannerMiddleR').css({opacity:0,left:0}).stop().eq(index).animate({left:-25,opacity:1},600,"easeOutBounce");
+    $('.Banner .bannerMiddleL').css({opacity:0,left:0}).stop().eq(index).animate({opacity:1},600);
+    $('#bannerFrame').css({backgroundColor:colorList['slide'+ index].bgColor});
 }
