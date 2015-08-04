@@ -10,6 +10,7 @@
     <script src="../static/js/module/index.js"></script>
     <script src="../static/js/module/index2.js"></script>
     <script src="../static/js/module/index3.js"></script>
+    <script src="../static/js/module/indexFunctions.js"></script>
 </head>
 <body>
 
@@ -528,9 +529,9 @@
                 </div>
 
                 <aside>
-                    <div class="banner-m-img block">
+                   <!-- <div class="banner-m-img">
 
-                    </div>
+                    </div>-->
 
                     <!--吃货-->
                     <section class="banner-m-img block curr">
@@ -731,14 +732,14 @@
                 <section class="pr fl w890 h_100 mt19">
                     <h3 class="ffMy fc333">手快有，手慢无&nbsp;&nbsp;<span class="f13 fn fc999">每日3场准点限量秒杀</span></h3>
 
-                    <div class="miaosha-l bgd-morning">
-                        <div class="miaosha-l-timeline w_100 pr overHid">
-                            <i class="sun"></i>
+                    <div class="miaosha-l">
+                        <div class="miaosha-l-timeline w_100 pr ">
+                            <i id="daynight" class="sun"></i>
                             <div class="timeline pa">
                                 <i class="line inlineBlock pr ftn"></i>
                                 <i class="clock morning" ></i>
                                 <div class="timeline-item pa">
-                                    <p class="fcWhite f16 fb ffMy pa curr">
+                                    <p class="fcWhite f16 fb ffMy pa">
                                         <i class="pa "></i>
                                         <span class="inlineBlock w_100 tc pa">早场06:00<em class="ftn">正在疯抢</em></span>
                                     </p>
@@ -755,14 +756,17 @@
 
                                 </div>
                             </div>
+                            <script>
+                                /*显示倒计时*/
+                                countDown();
+                            </script>
                             <div class="daojishi pa tc">
                                 <h6 class="ffMy fn f14 fc666">秒杀倒计时</h6>
-                                <span class="ffMy fb fcWhite f23">00</span>
+                                <span class="ffMy fb fcWhite f23"></span>
                                 <i class="fc666 f26 ffMy ftn fb">:</i>
-                                <span class="ffMy fb fcWhite f23">22</span>
+                                <span class="ffMy fb fcWhite f23"></span>
                                 <i class="fc666 f26 ffMy ftn fb">:</i>
-                                <span class="ffMy fb fcWhite f23">14</span>
-
+                                <span class="ffMy fb fcWhite f23"></span>
                             </div>
                         </div>
 
@@ -3961,7 +3965,7 @@
 
                     </div>
 
-                    <div class="kxec-r-imgList pa bgdWhite">
+                    <div class="kxec-r-imgList _kele pa bgdWhite">
                         <ul class="block">
                             <li class="pr">
                                 <a href="#" class="inlineBlock">
@@ -4815,7 +4819,7 @@
 
                     </div>
 
-                    <div class="kxec-r-imgList pa bgdWhite">
+                    <div class="kxec-r-imgList _xian pa bgdWhite">
                         <ul class="block">
                             <li class="pr">
                                 <a href="#" class="inlineBlock">
@@ -5668,7 +5672,7 @@
 
                     </div>
 
-                    <div class="kxec-r-imgList pa bgdWhite">
+                    <div class="kxec-r-imgList _ele pa bgdWhite">
                         <ul class="block">
                             <li class="pr">
                                 <a href="#" class="inlineBlock">
@@ -6520,7 +6524,7 @@
 
                     </div>
 
-                    <div class="kxec-r-imgList pa bgdWhite">
+                    <div class="kxec-r-imgList _chan pa bgdWhite">
                         <ul class="block">
                             <li class="pr">
                                 <a href="#" class="inlineBlock">
