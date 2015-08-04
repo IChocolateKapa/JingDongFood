@@ -4,15 +4,19 @@
 $(function () {
 
     /*页面加载时banner动画效果 开始*/
+    /*var $img_l = $("section.banner-m-img").eq(0).find(".img-l");
+
+    $img_l.animate({'opacity': "1", "filter": "alpha(opacity=100)"}, 100);
     var $img_r = $("section.banner-m-img").eq(0).find(".img-r");
     $img_r.animate({"right": '40px'}, 100);
-    $img_r.animate({"opacity": '1'}, 30);
+    $img_r.animate({"opacity": '1', "filter": "alpha(opacity=100)"}, 30);
     $img_r.animate({"right": '10px'}, 40);
     $img_r.animate({"right": '25px'}, 40);
     setTimeout(function(){
         $(".trigger-a:nth-of-type(1)").addClass("_triggerHover");
-    }, 100);
-
+    }, 100);*/
+    var curEle = $(".trigger-a").eq(0);
+    bannerAnimate(curEle, 0);
     autoSlide();
     /*页面加载时banner动画效果 结束*/
 
@@ -177,11 +181,17 @@ $(function () {
 
     /*banner 中间动图 开始*/
     /*鼠标滑过 trigger时 变换背景和大图 --开始-- */
-    $('.trigger-a').hover(function(){
+    var bannerTimer;
+    $('.trigger-a').mouseenter(function(){
         clearInterval(timer_auto);
         var index = $(this).index();
-        bannerAnimate($(this), index);
-    }, function(){
+        var $this = $(this);
+        bannerTimer = setTimeout(function(){
+            bannerAnimate($this, index);
+        }, 500);
+    })
+    $('.trigger-a').mouseleave(function(){
+        clearTimeout(bannerTimer);
         autoSlide();
     })
     /*鼠标滑过 trigger时 变换背景和大图 --结束-- *
@@ -190,84 +200,39 @@ $(function () {
 })
 
 
-function getImgClass(index){
-    var img = "";
-    switch (index){
-        case 0:
-            img = "sx";
-            break;
-        case 1:
-            img = "mj";
-            break;
-        case 2:
-            img = "yl";
-            break;
-        case 3:
-            img = "sp";
-            break;
-        case 4:
-            img = "bj";
-            break;
-        default:
-            img = ""
-    }
-
-    return img;
-}
-
-function getImgName(index){
-    var img = "";
-    switch (index){
-        case 0:
-            img = "bgd-chihuo";
-            break;
-        case 1:
-            img = "bgd-rouchuan";
-            break;
-        case 2:
-            img = "bgd-putao";
-            break;
-        case 3:
-            img = "bgd-jiushui";
-            break;
-        default:
-            img = "bgd-chihuo"
-    }
-
-    return img;
-}
 
 
 function bannerAnimate($obj, index){
+    /*底部圆圈trigger样式*/
+    $(".trigger-a").removeClass("_triggerHover");
+    $obj.addClass("_triggerHover");
 
-    var $ImgContainer = $("section.banner-m-img");
-    /*先隐藏所有图片*/
-    $ImgContainer.removeClass("curr");
 
-    var $img_l = $ImgContainer.eq(index).find(".img-l");
-    var $img_r = $ImgContainer.eq(index).find(".img-r");
-    $img_l.animate({'opacity': "0"}, 100);
-    $img_r.animate({'opacity': "0", "right": "-120px"}, 100);
+    var $ImgContainer = $(".banner-m-img");
 
+    $ImgContainer.removeClass("curr")
+                 .eq(index)
+                 .stop()
+                 .addClass("curr")
+                 .animate({"opacity": "1"}, 600);
+
+    var $img_l = $('.banner-m-img .img-l').css({"opacity": "0", "filter": "alpha(opacity=0)"}).stop().eq(index)
     setTimeout(function(){
-        /*给banner换背景颜色*/
-        $(".banner").attr("class", "banner");
-        $(".banner").addClass(getImgName(index));
+        $img_l.animate({"opacity": "1"}, 600);
+    }, 100)
 
-        $(".trigger-a").removeClass("_triggerHover");
-        $obj.addClass("_triggerHover");
+    /*给banner换背景颜色*/
+    $(".banner").attr("class", "banner");
+    $(".banner").addClass(getImgName(index));
 
-        /*展示当前index的两张图片*/
-        $ImgContainer.eq(index).addClass("curr");
-        $img_l.animate({'opacity': "1"}, 900);
+
+    var $img_r = $('.banner-m-img .img-r').css({"opacity": "0", "filter": "alpha(opacity=0)", "right": "-120px"}).stop().eq(index);
+    setTimeout(function(){
+        $img_r.animate({"right": '40px'}, 100)
+            .animate({"opacity": '1', "filter": "alpha(opacity=100)"}, 30)
+            .animate({"right": '10px'}, 40)
+            .animate({"right": '30px'}, 40)
+            .animate({"right": '20px'}, 40);
     }, 200);
 
-    setTimeout(function(){
-        $img_r.animate({"right": '40px'}, 100);
-        $img_r.animate({"opacity": '1'}, 30);
-        $img_r.animate({"right": '10px'}, 40);
-        $img_r.animate({"right": '25px'}, 40);
-    }, 500)
-
 }
-

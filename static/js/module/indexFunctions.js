@@ -2,6 +2,56 @@
  * Created by Administrator on 2015/8/4.
  */
 
+
+function getImgClass(index){
+    var img = "";
+    switch (index){
+        case 0:
+            img = "sx";
+            break;
+        case 1:
+            img = "mj";
+            break;
+        case 2:
+            img = "yl";
+            break;
+        case 3:
+            img = "sp";
+            break;
+        case 4:
+            img = "bj";
+            break;
+        default:
+            img = ""
+    }
+
+    return img;
+}
+
+function getImgName(index){
+    var img = "";
+    switch (index){
+        case 0:
+            img = "bgd-chihuo";
+            break;
+        case 1:
+            img = "bgd-rouchuan";
+            break;
+        case 2:
+            img = "bgd-putao";
+            break;
+        case 3:
+            img = "bgd-jiushui";
+            break;
+        default:
+            img = "bgd-chihuo"
+    }
+
+    return img;
+}
+
+
+
 //banner计时器
 var timer_auto;
 function autoSlide() {
@@ -33,23 +83,23 @@ function countDown(){
         $(".clock").attr("class", "clock");
         $(".miaosha-l").attr("class", "miaosha-l");
         $(".timeline-item p").removeClass("curr");
+
+        $("#daynight").attr("class", "moon");
         /*morming*/
-        if(H > 0 && H < 6){
-            $(".clock").addClass("night");
-            $(".miaosha-l").addClass("bgd-night");
-            $(".timeline-item p").eq(2).addClass("curr");
-            var h = 5;
-        } else if(H > 6 && H < 12){
+        if(H > 6 && H < 12){
+            $("#daynight").attr("class", "sun");
             $(".clock").addClass("morning");
             $(".miaosha-l").addClass("bgd-morning");
             $(".timeline-item p").eq(0).addClass("curr");
             var h = 11;
         } else if(H > 12 && H < 18){
+            $("#daynight").attr("class", "sun");
             $(".clock").addClass("noon");
             $(".miaosha-l").addClass("bgd-noon");
             $(".timeline-item p").eq(1).addClass("curr");
             var h = 17;
         } else{
+            $("#daynight").attr("class", "moon");
             $(".clock").addClass("night");
             $(".miaosha-l").addClass("bgd-night");
             $(".timeline-item p").eq(2).addClass("curr");
@@ -59,21 +109,19 @@ function countDown(){
         var hour = h - H;
         var minute = m - M;
         var second = s - S;
-
         var nHor = hour + 24;
 
-
-        if(hour >= 0 || hour < 6){
+        if(hour >= 0 && hour < 6){
             $('.daojishi span').eq(0).html("0" + hour);
-        } else if(hour < 0){
-            $('.daojishi span').eq(0).html(nHor);
         } else{
-            $('.daojishi span').eq(0).html(hour);
+            if(nHor < 10){
+                $('.daojishi span').eq(0).html("0" + nHor);
+            } else{
+                $('.daojishi span').eq(0).html(nHor);
+            }
         }
 
-        if(nHor < 10){
-            $('.daojishi span').eq(0).html("0" + nHor);
-        }
+
 
         if(minute < 10){
             $('.daojishi span').eq(1).html("0" + minute);
