@@ -98,12 +98,12 @@
   background: #c81623 !important;
 }
 ._downArrow {
-  height: 7px;
-  width: 13px;
   top: 2px;
+  right: 2px;
+  height: 7px;
+  overflow: hidden;
+  font: 400 14px/14px consolas;
   color: #6A6A6A;
-  font: 400 15px/15px consolas;
-  -webkit-text-size-adjust: none;
   transition: 0.2s linear 0s;
   -webkit-transition: 0.2s linear 0s;
   -moz-transition: 0.2s linear 0s;
@@ -111,14 +111,12 @@
   -o-transition: 0.2s linear 0s;
 }
 ._downArrow i {
-  font-size: 20px;
-  top: -8px;
-  left: -4px;
   transform: rotate(-8deg);
   -webkit-transform: rotate(-8deg);
   -moz-transform: rotate(-8deg);
   -ms-transform: rotate(-8deg);
   -o-transform: rotate(-8deg);
+  top: -7px;
 }
 ._navHover {
   border-left: 1px solid #dddddd;
@@ -1369,7 +1367,7 @@ a:hover {
   border-bottom: transparent;
 }
 .kxec-r-imgList {
-  height: 450px;
+  height: 440px;
   width: 130px;
   right: -1px;
   top: 0;
@@ -1453,3 +1451,25 @@ a:hover {
   top: 150px;
 }
 /*我 渴了 饿了 闲了 馋了 结束*/
+/*购物指南部分*/
+.zhinan {
+  /*column-width: 90px;
+  column-count: 5;
+  column-gap: 170px;
+  -webkit-column-width: 90px;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 170px;*/
+}
+.zhinan section {
+  width: 90px;
+  margin-left: 190px;
+}
+.zhinan section:nth-of-type(1) {
+  margin-left: 0;
+}
+.zhinan a {
+  line-height: 170%;
+}
+.footer {
+  border-top: 1px solid #e5e5e5;
+}

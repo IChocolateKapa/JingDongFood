@@ -179,19 +179,18 @@
   color: #ffffff !important;
   background: #c81623 !important;;
 }
+
 ._downArrow{
-  height: 7px;
-  width: 13px;
   top: 2px;
+  right: 2px;
+  height: 7px;
+  overflow: hidden;
+  font: 400 14px/14px consolas;
   color: #6A6A6A;
-  font: 400 15px/15px consolas;
-  -webkit-text-size-adjust:none;
   .transition(.2s, linear, 0s);
   i{
-    font-size: 20px;
-    top: -8px;
-    left: -4px;
     .rotate(-8deg);
+    top: -7px;
   }
 }
 
@@ -1451,7 +1450,7 @@ a:hover{
 
 @imgWidth: 130px;
 .kxec-r-imgList{
-  height: 450px;
+  height: 440px;
   width: @imgWidth;
   right: -1px;
   top: 0;
@@ -1544,3 +1543,32 @@ a:hover{
 
 }
 /*我 渴了 饿了 闲了 馋了 结束*/
+
+
+/*购物指南部分*/
+.zhinan{
+  //height: 250px;
+  /*column-width: 90px;
+  column-count: 5;
+  column-gap: 170px;
+  -webkit-column-width: 90px;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 170px;*/
+  //float: left;
+  //width: 220px;
+  section{
+    &:nth-of-type(1){
+      margin-left: 0;
+    }
+    width: 90px;
+    margin-left: 190px;
+
+  }
+  a{
+    line-height: 170%;
+  }
+}
+
+.footer{
+  .border-top(#e5e5e5);
+}

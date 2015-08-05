@@ -38,7 +38,7 @@
 .h412{height: 412px;}
 .h495{height: 495px;}
 .h600{height: 600px;}
-
+.h156{height: 156px;}
 .h_20{height: 20%;}
 .w_20{width: 20%;}
 
@@ -47,6 +47,8 @@
 .ml10{margin-left: 10px;}
 .ml20{margin-left: 20px;}
 .mt90{margin-top: 90px;}
+.mb10{
+    margin-bottom: 10px;}
 
 .pdlr10{padding: 2px 10px;}
 .pd10{padding: 10px;}
@@ -81,7 +83,7 @@
 .bgd-rouchuan{background: #fba75c;}
 .bgd-putao{background: #310777;}
 .bgd-jiushui{background: #ffcc01;}
-.bgd-miaosha{background: #fff7e4;}
+.bgd-miaosha{background: #fff7e4; padding-bottom: 40px;}
 .bgd-liji{background: #cd0a0a;}
 
 .bgd-kele{background: rgba(67,172,231,.8);}
