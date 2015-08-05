@@ -98,29 +98,32 @@ $(function () {
     })
 
 
+
+
+    /*渴了*/
+    $(".ke li").hover(function(){
+        var $this = $(this);
+        kxec_func(".ke", $this);
+    })
+
+    /*闲了*/
+    $(".xian li").hover(function(){
+        var $this = $(this);
+        kxec_func(".xian", $this);
+    })
+
+    /*饿了*/
+    $(".ele li").hover(function(){
+        var $this = $(this);
+        kxec_func(".ele", $this);
+    })
+
+    /*馋了*/
+    $(".chan li").hover(function(){
+        var $this = $(this);
+        kxec_func(".chan", $this);
+    })
+
 })
 
 
-function carAnimate($obj, index, bot, left){
-    $('.meishi-l ._addrDot p').removeClass("curr");
-    $obj.addClass("curr");
-    $("._car").animate({
-        'top': bot +'px',
-        'left': left + 'px'
-    }, 500)
-
-    $(".meishi-l ._content ul").removeClass("block");
-    $(".meishi-l ._content ul").eq(index).addClass("block");
-}
-
-function planeAnimate($obj, index, bot, left){
-    $('.meishi-r ._addrDot p').removeClass("curr");
-    $obj.addClass("curr");
-    $("._plane").animate({
-        'top': bot +'px',
-        'left': left + 'px'
-    }, 500)
-
-    $(".meishi-r ._content ul").removeClass("block");
-    $(".meishi-r ._content ul").eq(index).addClass("block");
-}

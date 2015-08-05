@@ -101,7 +101,6 @@
   top: 2px;
   right: 2px;
   height: 7px;
-  overflow: hidden;
   font: 400 14px/14px consolas;
   color: #6A6A6A;
   transition: 0.2s linear 0s;
@@ -117,6 +116,8 @@
   -ms-transform: rotate(-8deg);
   -o-transform: rotate(-8deg);
   top: -7px;
+  font-size: 14px;
+  font-family: consolas;
 }
 ._navHover {
   border-left: 1px solid #dddddd;
@@ -1472,4 +1473,44 @@ a:hover {
 }
 .footer {
   border-top: 1px solid #e5e5e5;
+}
+#top {
+  position: absolute;
+  right: 0;
+}
+.top1 {
+  bottom: 10px;
+}
+.fixToolBar {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  margin-left: 605px;
+  height: 100px;
+  width: 25px;
+  bottom: 20px;
+  z-index: 9999;
+  display: block;
+  overflow: hidden;
+  left: 50%;
+}
+#goTop {
+  display: block;
+  position: relative;
+  width: 17px;
+  height: 66px;
+  padding: 28px 4px 0;
+  margin: 5px 0;
+  text-align: center;
+  line-height: 14px;
+  text-decoration: none;
+}
+#goTop b {
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  width: 17px;
+  height: 16px;
+  overflow: hidden;
+  background: url("../images/common/common2.png") no-repeat;
+  background-position: -21px -219px;
 }

@@ -4,17 +4,6 @@
 $(function () {
 
     /*页面加载时banner动画效果 开始*/
-    /*var $img_l = $("section.banner-m-img").eq(0).find(".img-l");
-
-    $img_l.animate({'opacity': "1", "filter": "alpha(opacity=100)"}, 100);
-    var $img_r = $("section.banner-m-img").eq(0).find(".img-r");
-    $img_r.animate({"right": '40px'}, 100);
-    $img_r.animate({"opacity": '1', "filter": "alpha(opacity=100)"}, 30);
-    $img_r.animate({"right": '10px'}, 40);
-    $img_r.animate({"right": '25px'}, 40);
-    setTimeout(function(){
-        $(".trigger-a:nth-of-type(1)").addClass("_triggerHover");
-    }, 100);*/
     var curEle = $(".trigger-a").eq(0);
     bannerAnimate(curEle, 0);
     autoSlide();
@@ -197,42 +186,20 @@ $(function () {
     /*鼠标滑过 trigger时 变换背景和大图 --结束-- *
     /*banner 中间动图 结束*/
 
+
+    /*返回顶部*/
+    $("#goTop").click(function(){
+        $(window).scrollTop(0);
+    })
 })
 
-
-
-
-function bannerAnimate($obj, index){
-    /*底部圆圈trigger样式*/
-    $(".trigger-a").removeClass("_triggerHover");
-    $obj.addClass("_triggerHover");
-
-
-    var $ImgContainer = $(".banner-m-img");
-
-    $ImgContainer.removeClass("curr")
-                 .eq(index)
-                 .stop()
-                 .addClass("curr")
-                 .animate({"opacity": "1"}, 600);
-
-    var $img_l = $('.banner-m-img .img-l').css({"opacity": "0", "filter": "alpha(opacity=0)"}).stop().eq(index)
-    setTimeout(function(){
-        $img_l.animate({"opacity": "1"}, 600);
-    }, 100)
-
-    /*给banner换背景颜色*/
-    $(".banner").attr("class", "banner");
-    $(".banner").addClass(getImgName(index));
-
-
-    var $img_r = $('.banner-m-img .img-r').css({"opacity": "0", "filter": "alpha(opacity=0)", "right": "-120px"}).stop().eq(index);
-    setTimeout(function(){
-        $img_r.animate({"right": '40px'}, 100)
-            .animate({"opacity": '1', "filter": "alpha(opacity=100)"}, 30)
-            .animate({"right": '10px'}, 40)
-            .animate({"right": '30px'}, 40)
-            .animate({"right": '20px'}, 40);
-    }, 200);
-
-}
+/*监测返回顶部出现*/
+$(window).on("scroll", function(){
+    var scrollTop = $(window).scrollTop();
+    console.log(scrollTop);
+    if(scrollTop > 600){
+        $(".fixToolBar").show();
+    } else{
+        $(".fixToolBar").hide();
+    }
+})

@@ -136,3 +136,87 @@ function countDown(){
         }
     }, 1000)
 }
+
+
+
+
+
+/*banner动图切换*/
+function bannerAnimate($obj, index){
+    /*底部圆圈trigger样式*/
+    $(".trigger-a").removeClass("_triggerHover");
+    $obj.addClass("_triggerHover");
+
+
+    var $ImgContainer = $(".banner-m-img");
+
+    $ImgContainer.removeClass("curr")
+        .eq(index)
+        .stop()
+        .addClass("curr")
+        .animate({"opacity": "1"}, 600);
+
+    var $img_l = $('.banner-m-img .img-l').css({"opacity": "0", "filter": "alpha(opacity=0)"}).stop().eq(index)
+    setTimeout(function(){
+        $img_l.animate({"opacity": "1"}, 600);
+    }, 100)
+
+    /*给banner换背景颜色*/
+    $(".banner").attr("class", "banner");
+    $(".banner").addClass(getImgName(index));
+
+
+    var $img_r = $('.banner-m-img .img-r').css({"opacity": "0", "filter": "alpha(opacity=0)", "right": "-120px"}).stop().eq(index);
+    setTimeout(function(){
+        $img_r.animate({"right": '40px'}, 100)
+            .animate({"opacity": '1', "filter": "alpha(opacity=100)"}, 30)
+            .animate({"right": '10px'}, 40)
+            .animate({"right": '30px'}, 40)
+            .animate({"right": '20px'}, 40);
+    }, 200);
+
+}
+
+
+/*美食地理凄恻特效*/
+function carAnimate($obj, index, bot, left){
+    $('.meishi-l ._addrDot p').removeClass("curr");
+    $obj.addClass("curr");
+    $("._car").animate({
+        'top': bot +'px',
+        'left': left + 'px'
+    }, 500)
+
+    $(".meishi-l ._content ul").removeClass("block");
+    $(".meishi-l ._content ul").eq(index).addClass("block");
+}
+
+
+/*美食地理飞机特效*/
+function planeAnimate($obj, index, bot, left){
+    $('.meishi-r ._addrDot p').removeClass("curr");
+    $obj.addClass("curr");
+    $("._plane").animate({
+        'top': bot +'px',
+        'left': left + 'px'
+    }, 500)
+
+    $(".meishi-r ._content ul").removeClass("block");
+    $(".meishi-r ._content ul").eq(index).addClass("block");
+}
+
+
+
+/*渴了饿了闲了 切换*/
+function kxec_func(ele, $obj){
+    $(ele + " li").removeClass("curr");
+    $obj.addClass("curr");
+    var index = $obj.index();
+    var $content = $(ele).parent().siblings("div").find("._content");
+    var $imgList = $(ele).parent().siblings("div").find(".kxec-r-imgList");
+    $content.find("ul").removeClass("block");
+    $content.find("ul").eq(index).addClass("block");
+
+    $imgList.find("ul").removeClass("block");
+    $imgList.find("ul").eq(index).addClass("block");
+}
